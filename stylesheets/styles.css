@@ -746,10 +746,30 @@ header p {
   background: linear-gradient(#ffe788, #ffe788);
   background-color: #ffeca0;
 }
-#banner .fork {
+#banner .fork_cv {
+  position: fixed;
+  left: 50%;
+  margin-left: -189px;
+  padding: 10px 12px;
+  margin-top: 6px;
+  line-height: 14px;
+  font-size: 14px;
+  background-color: #FFE788;
+}
+#banner .fork_home {
   position: fixed;
   left: 50%;
   margin-left: -325px;
+  padding: 10px 12px;
+  margin-top: 6px;
+  line-height: 14px;
+  font-size: 14px;
+  background-color: #FFE788;
+}
+#banner .fork_git {
+  position: fixed;
+  left: 50%;
+  margin-left: -260px;
   padding: 10px 12px;
   margin-top: 6px;
   line-height: 14px;

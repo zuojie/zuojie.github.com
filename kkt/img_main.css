@@ -1,0 +1,40 @@
+﻿@charset "utf-8";
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, button, textarea, p, th, td { margin:0; padding:0; }
+fieldset, img { border:0; }
+li {list-style:none;}
+
+
+html{background:#eaeaea;}
+body{background:#f5f4f0;}
+
+body, td, button, select, input, textarea { color:#826638; font:12px/1.5 Tahoma, Helvetica, Arial, "宋体", sans-serif; }
+a,a:visited{cursor:pointer;color:#826638; text-decoration:none;outline:none;}
+a:hover{color:#fff;}
+
+/*查看演示代码下载样式*/
+.musicd{margin-top:15px; margin-bottom:20px; margin-left: auto; margin-right:auto; width:100%;text-align:center;}
+.yansi-img{float:left;margin-top:10px;margin-left:180px;margin-bottom:20px;}
+.yansi-img a{background-image:url('../images/yansi.jpg'); width:126px; height:30px; overflow:hidden; font-size:14px; display:block; text-align:center; line-height:30px; color:#00ff00;}
+.yansi-img a:hover{color:#ffffff;text-decoration:none;}
+
+.down-img{float:right;margin-top:10px;margin-right:180px;margin-bottom:20px;}
+.down-img a{background-image:url('../images/yansi.jpg'); width:126px; height:30px; overflow:hidden; font-size:14px; display:block; text-align:center; line-height:30px; color:#00ff00;}
+.down-img a:hover{color:#ffffff;text-decoration:none;}
+/*above added by 彭作杰*/
+.banner{height:292px;padding-top:2px;background:url(bg_0414.png) repeat-x 0 0;}
+.mod-banner{width:815px;height:290px;margin:0 auto;position:relative;z-index:1;}
+#focus_img{height:290px;overflow:hidden;}
+#focus_img img{ cursor:pointer;}
+.mod-banner a.btn{width:60px;height:60px;position:absolute;top:120px; text-indent:-99em; cursor:pointer;background:url(foc_btn_bg.png) no-repeat;border:0;padding:0;}
+#focus_btn{position:absolute;top:170px;left:900px;z-index:9;}
+#btn_focus_prev{background-position:-120px 0;left:-75px;}
+#btn_focus_prev:hover{background-position:-60px 0;padding:0;width:60px;height:60px;}
+#btn_focus_prev:active{background-position:0 0;}
+#btn_focus_next{background-position:-120px -60px;right:-75px;}
+#btn_focus_next:hover{background-position:-60px -60px;padding:0;width:60px;height:60px;}
+#btn_focus_next:active{background-position:0 -60px;}
+
+
+
+

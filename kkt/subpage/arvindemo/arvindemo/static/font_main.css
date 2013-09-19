@@ -1,0 +1,74 @@
+.build_size_small {
+  font-size: 7.76em;
+  font-weight: bold;
+  line-height: 1;
+  /*background: #ddd;*/
+  color: #cccccc;
+  text-align: center;/*added by arvin peng*/
+  z-index: 0; }
+  .build_size_small:hover,.build_size_small.hover {/*added by arvin peng*/
+	color: #ddd;
+	/*background:#cccccc;*/
+	/*border:1px solid #000;*/}
+	
+/*-------------------------footer--------------------*/
+#footer_inner {
+  margin: 0 auto 0 auto;
+  width: 950px;
+  padding: 0 5px;
+  height: 100%;
+  -moz-background-clip: border;
+  -moz-background-inline-policy: continuous;
+  -moz-background-origin: padding; }
+
+#footer_inner {
+  position: relative;
+  margin-bottom: 0; }
+
+#footer {
+  margin-top: 0em;
+  clear: both; }
+  
+#footer {
+width: 100%;
+color: #eeeeee;
+background-color: #292929;
+margin: 0px;
+line-height: normal; }
+#footer a {
+  color: #eeeeee; }
+#footer #logo {
+  text-align: center;
+  clear: both; }
+  #footer #logo h2 {
+    margin: 0px; }
+  #footer #logo h2.kkt_logo_footer {
+    font-size: 3.9em;
+    font-weight: bold;
+    font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia;
+    font-weight: bold;
+    font-style: italic;
+    border: none; }
+    #footer #logo h2.kkt_logo_footer .beta {
+      color: #eeeeee;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Helvetica, Arial, sans-serif;
+      font-style: normal; }
+#footer #created_in {
+  color: #666666;
+  font-size: 0.75em;
+  text-align: center; }
+#footer #other_links {
+  font-weight: bold;
+  text-align: center; }
+  #footer #other_links p {
+    margin: 0; }
+  #footer #other_links span {
+    padding-right: 8px;
+    padding-left: 8px; }
+  #footer #other_links a {
+    font-size: 16px;
+    font-weight: normal; }
+#footer .feedback_area {
+  text-align: center; }

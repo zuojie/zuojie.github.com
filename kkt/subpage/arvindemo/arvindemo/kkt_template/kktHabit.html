@@ -1,0 +1,41 @@
+{% extends "kktBase.html" %}
+
+{% block title %}习惯养成提醒{% endblock %}
+
+{% block h1 %}
+	习惯养成提醒
+{% endblock %}
+{% block legend %}
+	请填入相关信息
+{% endblock %}
+{% block content %}
+	<p>
+		<label>座右铭:</label>
+		<input type="text" name="motto" required pattern=".{1,100}" size=50 title="字数控制在1到100个字符之间" autofocus="true" 
+		placeholder = "It takes at least 21 days to form a habit!"/>
+		<small>写一句话每天鼓励一下自己吧</small>
+	</p>
+	<p>
+		<label>
+			任务:&nbsp;&nbsp;&nbsp;&nbsp;
+		</label>
+		<input type="text" name="task" required pattern=".{1,100}" title="字数控制在1到100个字符之间"/>
+		<small>你每天要坚持要做的事</small>
+	</p>
+	<p>
+		<label>
+			昵称:&nbsp;&nbsp;&nbsp;&nbsp;
+		</label>
+		<input type="text" name="nick" required pattern=".{1,50}" title="字数控制在1到50个字符之间"/>
+		<small>每天提醒时你想<strong><i>KKT</i></strong>如何称呼您</small>
+	</p>
+	<p>
+		<label>时间:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="text" name="hour" required pattern=".{1,2}" title="字符总数控制在1到2个字符之间"
+		placeholder="example: 19"/>
+		<small>您每天希望在几点<strong><i>KKT</i></strong>对您进行提醒，采用24小时制，精确到小时</small>
+	</p>
+{% endblock %}
+{% block ps %}
+	<a href="http://127.1:8000" target="_blank">KKT</a>
+{% endblock %}

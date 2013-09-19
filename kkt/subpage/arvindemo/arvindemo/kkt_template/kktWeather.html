@@ -1,0 +1,33 @@
+{% extends "kktBase.html" %}
+
+{% block title %}天气信息订制{% endblock %}
+
+{% block h1 %}
+	天气信息订制
+{% endblock %}
+{% block legend %}
+	请填入相关信息
+{% endblock %}
+{% block content %}
+	<p>
+		<label>城市:</label>
+		<input type="text" name="city" required pattern=".{1,50}" size=35 title="名字控制在1到50个字符之间" autofocus="true" 
+		placeholder="温馨提醒：每天发送未来两天的天气预报"/>
+		<small>请输入你想订制天气的城市名，如果输入名字有误，将收不到来自KKT的信息</small>
+	</p>
+	<p>
+		<label>省份:</label>
+		<input type="text" name="province" required pattern=".{1,5}" title="名字控制在1到5个字符之间" />
+		<small>输入城市所属省份</small>
+	</p>
+	<p>
+		<label>
+			昵称:
+		</label>
+		<input type="text" name="nick" required pattern=".{1,50}" title="昵称控制在1到50个字符之间"/>
+		<small>请输入一个昵称</small>
+	</p>
+{% endblock %}
+{% block ps %}
+	<a href="http://www.nmc.gov.cn/" target="_blank">中央气象台</a>
+{% endblock %}

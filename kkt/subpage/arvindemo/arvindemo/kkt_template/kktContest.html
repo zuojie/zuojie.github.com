@@ -1,0 +1,31 @@
+{% extends "kktBase.html" %}
+
+{% block title %}比赛信息订制{% endblock %}
+
+{% block h1 %}
+	比赛信息订制
+{% endblock %}
+{% block legend %}
+	请填入您的个人信息
+{% endblock %}
+{% block content %}
+	<p>
+		<label>姓名:</label>
+		<input type="text" name="name" required pattern=".{1,50}" title="名字控制在1到50个字符之间" autofocus="true" />
+	</p>
+	<p>
+		<label>
+			常用的比赛昵称:
+		</label>
+		<input type="text" name="nick" required pattern=".{1,99}" title="昵称控制在1到50个字符之间"/>
+	</p>
+	<p>
+		<label>平常在哪些学校OJ/平台做题:</label>
+		<input type="text" name="ojs" required pattern=".{1,100}" title="字符总数控制在1到100个字符之间" 
+		placeholder="Eaxmple：PKU NKU CUGB Codechef Codeforces TopCoder" size=55 />
+		<small>输入学校首字母简写，学校之间之间请以空格隔开，如果想接收大部分常用OJ比赛信息，输入all即可</small>
+	</p>
+{% endblock %}
+{% block ps %}
+	<a href="http://acm.nankai.edu.cn/recent_contests.php" target="_blank">NKOJ</a>
+{% endblock %}

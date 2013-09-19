@@ -1,0 +1,36 @@
+{% extends "kktBase.html" %}
+
+{% block title %}商品价格信息订制{% endblock %}
+
+{% block h1 %}
+	商品价格信息订制
+{% endblock %}
+{% block legend %}
+	请填入商品信息
+{% endblock %}
+{% block content %}
+	<p>
+		<label>商品名称:</label>
+		<input type="text" name="goodsName" required pattern=".{1,99}" title="名字控制在1到100个字符之间" placeholder="example: NOKIA E71" 
+		autofocus="true" />
+		<small>请尽量准确填写商品全称</small>
+	</p>
+	<p>
+		<label>
+			商品属性:
+		</label>
+		<p>
+			<input type="radio" name="property" value="1" />图书影像<br />
+			<input type="radio" name="property" value="0" />其他<br />
+			<script> document.all("property")[1].checked=true;</script>
+		</p>
+	</p>
+	<p>
+		<label>期望价格:</label>
+		<input type="number" name="price" min="1" step="1" value="1">
+		<small>单位精确到元</small>
+	</p>
+{% endblock %}
+{% block ps %}
+	<a href="http://langlang.cc/" target="_blank">琅琅比价</a>
+{% endblock %}

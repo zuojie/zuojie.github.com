@@ -1,0 +1,51 @@
+{% extends "kktFooterBase.html" %}
+
+{% block title %}Q & A{% endblock %}
+
+{% block h1 %}
+	KKT常见问题
+{% endblock %}
+{% block body %}
+<p>
+	Q：信息订制成功后，如何退订
+	<b>
+		<br>A：退订接口暂时未实现，如果想要退订，可发飞信至kkt，短信格式如下:
+		<br>商品打折信息：del mall {商品名}
+		<br>比赛信息：del contest {学校首字母缩写名 | all}
+		<br>宣讲会信息：del presentation {城市名}
+		<br>习惯养成信息：del habit {每天完成的任务}
+		<br>天气预报信息：del weather {城市名}
+	</b>
+</p>
+<p>
+	Q：天气预报订制在哪
+	<b>
+		<br>A：我怎么会知道
+	</b>
+</p>
+<p>
+	Q：别人拿我的手机号订制怎么办
+	<b>
+		<br>A：信息订制后24小时内kkt会向机主发起验证，如果非您本人订制，忽略验证信息即可，
+		并且每天有信息订制数量上限
+	</b>
+</p>
+<p>
+	Q：我订制的商品信息完全不是我想要的，为什么
+	<b>
+		<br>A：请务必准确填写商品全称和商品属性
+	</b>
+</p>
+<p>
+	Q：是不是每次订制新的服务都要重新验证
+	<b>
+		<br>A：是的，因为没有采用账号密码体系，为保证用户信息安全，采用每次重新验证的方式
+	</b>
+</p>
+<p>
+	Q：反馈别的问题去哪吼
+	<b>
+		<br>A：猛击<a href="http://t.qq.com/sen_ing" target="_blank">我</a>
+	</b>
+</p>
+{% endblock %}

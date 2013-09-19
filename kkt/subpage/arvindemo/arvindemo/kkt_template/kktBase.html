@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+	<head>
+		<title>KKT | {% block title %}{% endblock %}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="/static/help/favicon.png" />
+		<link type="text/css" href="/static/font_main.css" rel="stylesheet" />
+		<script src="/static/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<!--
+		<style>
+			BODY {
+			background-color:#bfbfbf;
+			}
+		</STYLE>
+		-->
+	</head>
+	<div>
+		<body>
+			<h1>
+				<font face="方正舒体" size=10> {% block h1 %}{% endblock %}</font>
+			</h1>
+			<form action="/submitPage" method="post">
+				<fieldset>
+					<legend>
+						<font face="方正舒体" size=5>{% block legend%}{% endblock %} </font>
+					</legend>
+						{% block content %}{% endblock %}
+						<p>
+							<label>电话号码:</label>
+							<input type="tel" pattern="[0-9]{11}" name="phone" required title="请输入合法的手机号码" />
+							<small>暂只支持移动</small>
+						</p>
+				</fieldset>
+				<link type="text/css" href="/static/button_main.css" rel="stylesheet" />
+				<p style="text-align:center;">
+					<input type="submit" name="submit1" value="确认订制" class="button medium gray" />
+					<!-- style="margin-top:10px; margin-left:560px; margin-right:50px; margin-bottom:10px;"--> 
+				</p>
+			</form>
+			<p>
+				备注：信息来自
+				{% block ps %}
+				{% endblock %}
+			</p>
+			<!--
+			<a href="http://127.1:8000/Mall" target="_blank">
+				<img src="/static/html5.png" width="56" height="65" style="margin-top:10px; margin-left:560px; margin-right:50px; margin-bottom:10px;"/>
+			</a>
+			-->
+			{% block footer %}
+			{% endblock %}
+		</body>
+		<footer>
+			<p style = "text-align:center;">
+				<font face="Bernard MT Condensed"> HTML5 | Django Powered </font>
+			</p>
+		</footer>
+	</div>
+	
+</html>

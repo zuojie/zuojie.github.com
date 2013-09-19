@@ -1,0 +1,20 @@
+{% extends "kktBase.html" %}
+
+{% block title %}宣讲会信息订制{% endblock %}
+
+{% block h1 %}
+	宣讲会信息订制
+{% endblock %}
+{% block legend %}
+	请填入相关信息
+{% endblock %}
+{% block content %}
+	<p>
+		<label>城市:</label>
+		<input type="text" name="addr" required pattern=".{1,20}" title="城市名字控制在1到20个字符之间" autofocus="true" />
+		<small>请输入您所在的城市
+	</p>
+{% endblock %}
+{% block ps %}
+	<a href="http://www.yingjiesheng.com/" target="_blank">应届生</a>
+{% endblock %}

@@ -1,21 +1,21 @@
 > -module(tcp).   
 -export([start/0, machine_client/1, machine_server/0]).   
 
-%%-define(SEQ_CLIENT, getSeq()).   
+> %%-define(SEQ_CLIENT, getSeq()).   
 %%-define(SEQ_SERVER, getSeq()).   
 -define(SEQ_CLIENT, 123).   
 -define(SEQ_SERVER, 321).   
 -define(CLOSE_ACK, 789).   
 
-getSeq() ->   
+> getSeq() ->   
  random:seed(erlang:now()),   
  random:uniform(erlang:trunc(math:pow(2, 31))).   
 
-machine_client(Pack) ->   
+> machine_client(Pack) ->   
  server ! Pack,   
  machine_client_listen().   
  
-machine_client_listen() ->   
+> machine_client_listen() ->   
  receive   
   {syn, ack, Seq, Ack} ->   
    %% 注意：第二次握手时，client会在SYN_SENT和ESTABLISHED之间短暂处于SYN_RCVD状态   
@@ -38,7 +38,7 @@ machine_client_listen() ->
    io:format("server[TIME_WAIT] -> client[LAST_ACK/CLOSED], 第四次挥手，ack置为1, Seq = ~w, Ack = ~w~n~n", [Seq, Ack])   
  end.   
 
-machine_server() ->   
+> machine_server() ->   
  receive   
   {syn, Seq} ->   
    io:format("client[SYN_SENT] -> server[LISTEN/SYN_RCVD], 第一次握手，syn置为1，Seq = ~w~n~n", [Seq]),   
@@ -68,14 +68,14 @@ machine_server() ->
    wait2MSL()   
  end.   
  
-%% 假设一个MSL = 3000ms   
+> %% 假设一个MSL = 3000ms   
 wait2MSL() ->   
  receive   
   after 6000 -> ok   
  end,   
     io:format("连接断开~n").   
  
-%% 搞起     
+> %% 搞起     
 start() ->   
  register(client, spawn(tcp, machine_client, [{syn, ?SEQ_CLIENT}])),   
  register(server, spawn(tcp, machine_server, [])).   

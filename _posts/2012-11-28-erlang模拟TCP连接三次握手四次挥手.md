@@ -3,6 +3,7 @@ layout: default
 title: 你好，世界
 ---
 # Erlang模拟TCP连接三次握手四次挥手
+{{ page.date | date_to_string }}
 TCP连接的断开和建立是it从业者尤其是面试官喜闻乐见的内容，今天笔者来借助erlang模拟一下TCP建立过程的三次握手（Three-way Handshak）和断开的四次挥手（Four-way handshake）过程，之所以选择erlang，是因为最近在看erlang的东西。   
 
 三次握手的目的是连接服务器指定端口，建立TCP连接,并同步连接双方的序列号和确认号并交换 TCP 窗口大小信息.在socket编程中，客户端执行connect()时。将触发三次握手。   

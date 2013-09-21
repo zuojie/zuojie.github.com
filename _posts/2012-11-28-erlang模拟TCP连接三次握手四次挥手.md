@@ -47,16 +47,16 @@ CLOSE_WAIT: 这种状态的含义其实是表示在等待关闭。怎么理解�
 LAST_ACK: 这个状态还是比较容易好理解的，它是被动关闭一方在发送FIN报文后，最后等待对方的ACK报文。当收到ACK报文后，也即可以进入到CLOSED可用状态了。   
 附上[erlang模拟TCP握手挥手](https://github.com/zuojie/zuojie.github.com/blob/master/demo/erlang_tcp_simulate.md)过程，其中没有进行错误处理：   
 结果附图:   
-![p1](http://zuojie.github.io/article/erlang_tcp_p3.jpg)   
+![p1](http://zuojie.github.io/article/erlang_tcp_p3.png)   
 附1：   
 SYN攻击   
    在三次握手过程中，服务器发送SYN-ACK之后，收到客户端的ACK之前的TCP连接称为半连接(half-open connect).此时服务器处于Syn_RECV状态.当收到ACK后，服务器转入ESTABLISHED状态.   
      Syn攻击就是 攻击客户端 在短时间内伪造大量不存在的IP地址，向服务器不断地发送syn包，服务器回复确认包，并等待客户的确认，由于源地址是不存在的，服务器需要不断的重发直 至超时，这些伪造的SYN包将长时间占用未连接队列，正常的SYN请求被丢弃，目标系统运行缓慢，严重者引起网络堵塞甚至系统瘫痪。   
-	  Syn攻击是一个典型的DDOS攻击。检测SYN攻击非常的方便，当你在服务器上看到大量的半连接状态时，特别是源IP地址是随机的，基本上可以断定这是一次SYN攻击.在Linux下可以如下命令检测是否被Syn攻击   
-	  netstat -n -p TCP | grep SYN_RECV   
-	  一般较新的TCP/IP协议栈都对这一过程进行修正来防范Syn攻击，修改tcp协议实现。主要方法有SynAttackProtect保护机制、SYN cookies技术、增加最大半连接和缩短超时时间等.   
-	  但是不能完全防范syn攻击。   
-	  附2：   
-	  MSL是Maximum Segment Lifetime,译为“报文最大保留时刻”，他是任何报文在收集上存在的最长时刻，高出这个时刻报文将被丢弃。   
-	  RFC 793中划定MSL为2分钟，现实应用中常用的是30秒，1分钟和2分钟等。2MSL即两倍的MSL，TCP的TIME_WAIT状态也称为2MSL守候状态，当TCP的一端提倡主动封锁，在发出最后一个ACK包后，即第3次握手完成后发送了第四次握手的ACK包后就进入了TIME_WAIT状态，必需在此状态上逗留两倍的MSL时刻。   
-	   守候2MSL时刻首要目标是怕最后一个ACK包对方未收到，那么对方在超时后将重发第三次握手的FIN包，主动封锁端接到重发的FIN包后可以再发一个ACK应答包。在TIME_WAIT状态时两头的端口不能使用。   
+Syn攻击是一个典型的DDOS攻击。检测SYN攻击非常的方便，当你在服务器上看到大量的半连接状态时，特别是源IP地址是随机的，基本上可以断定这是一次SYN攻击.在Linux下可以如下命令检测是否被Syn攻击   
+netstat -n -p TCP | grep SYN_RECV   
+一般较新的TCP/IP协议栈都对这一过程进行修正来防范Syn攻击，修改tcp协议实现。主要方法有SynAttackProtect保护机制、SYN cookies技术、增加最大半连接和缩短超时时间等.   
+但是不能完全防范syn攻击。   
+附2：   
+MSL是Maximum Segment Lifetime,译为“报文最大保留时刻”，他是任何报文在收集上存在的最长时刻，高出这个时刻报文将被丢弃。   
+RFC 793中划定MSL为2分钟，现实应用中常用的是30秒，1分钟和2分钟等。2MSL即两倍的MSL，TCP的TIME_WAIT状态也称为2MSL守候状态，当TCP的一端提倡主动封锁，在发出最后一个ACK包后，即第3次握手完成后发送了第四次握手的ACK包后就进入了TIME_WAIT状态，必需在此状态上逗留两倍的MSL时刻。   
+守候2MSL时刻首要目标是怕最后一个ACK包对方未收到，那么对方在超时后将重发第三次握手的FIN包，主动封锁端接到重发的FIN包后可以再发一个ACK应答包。在TIME_WAIT状态时两头的端口不能使用。   

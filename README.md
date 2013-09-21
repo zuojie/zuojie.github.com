@@ -1,3 +1,3 @@
 zuojie.github.com
 =================
-This page is about data analystics(DM, ML, Recommendation System, Algorithm etc)
+[zuojie.github.io](http://zuojie.github.io/ "zuojie's homepage")

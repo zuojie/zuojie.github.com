@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 你好，世界
+title: Erlang模拟TCP连接三次握手四次挥手
 ---
 # Erlang模拟TCP连接三次握手四次挥手
 *{{ page.date | date_to_string }}*   

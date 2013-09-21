@@ -17,3 +17,4 @@ TCP连接的断开和建立是it从业者尤其是面试官喜闻乐见的内容
    client发送确认包（ack确认），ack置为1。并把server发过来的Seq number加1作为此次发送的Ack Number。此时client处于ESTABLISHED状态，server收到最后一次的ack确认后也处于ESTABLISHED状态。   
    完成三次握手后，TCP连接建立，开始传输数据。   
    盗图总结：   
+   ![p1](http://zuojie.github.io/article/erlang_tcp_p1.jpg)

@@ -2,7 +2,7 @@
 layout: default
 title: Erlang模拟TCP连接三次握手四次挥手
 ---
-# Erlang模拟TCP连接三次握手四次挥手
+# {{ page.title }}
 *{{ page.date | date_to_string }}*   
 TCP连接的断开和建立是it从业者尤其是面试官喜闻乐见的内容，今天笔者来借助erlang模拟一下TCP建立过程的三次握手（Three-way Handshak）和断开的四次挥手（Four-way handshake）过程，之所以选择erlang，是因为最近在看erlang的东西。   
 

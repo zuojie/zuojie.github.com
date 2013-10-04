@@ -559,6 +559,10 @@ ul {
   list-style-image: url("../images/bullet.png");
 }
 
+.mylinks_class {
+  list-style-image: url("../images/github.ico");
+}
+
 strong {
   font-weight: bold;
   color: #333;

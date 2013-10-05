@@ -751,7 +751,7 @@ header p {
   background-color: #ffeca0;
 }
 #banner .fork_cv {
-  position: fixed;
+  position: relative;
   left: 50%;
   margin-left: -183px;
   padding: 10px 12px;
@@ -761,7 +761,7 @@ header p {
   background-color: #FFE788;
 }
 #banner .fork_home {
-  position: fixed;
+  position: relative;
   left: 50%;
   margin-left: -325px;
   padding: 10px 12px;
@@ -771,7 +771,7 @@ header p {
   background-color: #FFE788;
 }
 #banner .fork_git {
-  position: fixed;
+  position: relative;
   left: 50%;
   margin-left: -260px;
   padding: 10px 12px;

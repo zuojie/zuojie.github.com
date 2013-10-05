@@ -657,7 +657,7 @@ dt {
 header {
   padding: 25px 20px 40px 20px;
   margin: 0;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -696,7 +696,7 @@ header p {
   right: 50%;
   height: 50px;
   margin-right: -382px;
-  position: fixed;
+  position: relative;
   top: 115px;
   background: #ffcc00;
   border: 1px solid #f0b500;

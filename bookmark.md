@@ -5,7 +5,6 @@
 * [操作系统启动之谜](http://oilbeater.com/2012/06/29/the-secret-of-os-startup/)
 * [python资源包](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
 * [深入分析Linux自旋锁](http://blog.chinaunix.net/uid-20543672-id-3252604.html)
-___
 
 ####Blog
 * [spongeliu's blog](http://www.spongeliu.com/)

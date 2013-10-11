@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 机器学习实践:利用优化算法，实现StumbleUpon系统原型
+title: 优化无止境:利用优化算法，实现StumbleUpon系统原型
 ---
 # {{ page.title }}
 *{{ page.date | date_to_string}}*

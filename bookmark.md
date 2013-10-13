@@ -9,3 +9,4 @@
 
 ####Blog
 * [spongeliu's blog](http://www.spongeliu.com/)
+* [业界良心](http://www.lfd.uci.edu/~gohlke/pythonlibs)

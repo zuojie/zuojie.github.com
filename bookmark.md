@@ -5,7 +5,7 @@
 * [操作系统启动之谜](http://oilbeater.com/2012/06/29/the-secret-of-os-startup/)
 * [python资源包](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
 * [深入分析Linux自旋锁](http://blog.chinaunix.net/uid-20543672-id-3252604.html)
-* [[微扯蛋:工程师的价值和cy分类法](http://blog.cydu.net/2012/09/cy_values_classified.html)
+* [微扯蛋:工程师的价值和cy分类法](http://blog.cydu.net/2012/09/cy_values_classified.html)
 * [《机器学习实战》作者Peter Harrington：如何成为一位数据科学家（图灵访谈）](http://blog.csdn.net/wdxin1322/article/details/12186441)
 
 ####Blog

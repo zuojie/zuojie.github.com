@@ -8,8 +8,9 @@
 * [微扯蛋:工程师的价值和cy分类法](http://blog.cydu.net/2012/09/cy_values_classified.html)
 * [erlang调用外部程序如何得到其退出状态](http://blog.csdn.net/skymanwu/article/details/8284373)
 * [深入理解拉格朗日乘子法（Lagrange Multiplier) 和KKT条件](http://blog.csdn.net/xianlingmao/article/details/7919597)
-* [《机器学习实战》作者Peter Harrington：如何成为一位数据科学家（图灵访谈）](http://blog.csdn.net/wdxin1322/article/details/12186441)
+* [机器学习实战》作者Peter Harrington：如何成为一位数据科学家（图灵访谈）](http://blog.csdn.net/wdxin1322/article/details/12186441)
 
 ####Blog
 * [spongeliu's blog](http://www.spongeliu.com/)
 * [业界良心](http://www.lfd.uci.edu/~gohlke/pythonlibs)
+* [Python extensions to do machine learning](http://www.xavierdupre.fr/blog/2013-09-15_nojs.html)

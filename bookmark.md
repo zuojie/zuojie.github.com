@@ -9,6 +9,7 @@
 * [erlang调用外部程序如何得到其退出状态](http://blog.csdn.net/skymanwu/article/details/8284373)
 * [深入理解拉格朗日乘子法（Lagrange Multiplier) 和KKT条件](http://blog.csdn.net/xianlingmao/article/details/7919597)
 * [《编程机制探析》第十七章 函数式编程](http://buaawhl.iteye.com/blog/1160429)
+* [网站统计中的数据收集原理及实现](http://blog.codinglabs.org/articles/how-web-analytics-data-collection-system-work.html)
 * [《机器学习实战》作者Peter Harrington：如何成为一位数据科学家（图灵访谈）](http://blog.csdn.net/wdxin1322/article/details/12186441)
 
 ####Blog

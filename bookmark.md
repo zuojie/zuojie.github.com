@@ -14,3 +14,6 @@
 * [spongeliu's blog](http://www.spongeliu.com/)
 * [业界良心](http://www.lfd.uci.edu/~gohlke/pythonlibs)
 * [Python extensions to do machine learning](http://www.xavierdupre.fr/blog/2013-09-15_nojs.html)
+*
+####Book
+* [High-Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545/index.html)

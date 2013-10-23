@@ -8,4 +8,5 @@ title: Awesome Erlang Snippets
 
 >qsort([]) -> [];   
 qsort([H | T]) ->   
-	qsort([X || X <- T, X =< H]) ++ [H] ++ qsort([X || X <- T, X > H]).
+	qsort([X || X <- T, X =< H]) ++ [H] ++ qsort([X || X <- T, X > H]).   
+

@@ -21,3 +21,4 @@
 
 ####Book
 * [High-Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545/index.html)
+* [Frequently Asked Questions about Erlang](http://www.erlang.org/faq/faq.html)

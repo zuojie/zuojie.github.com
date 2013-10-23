@@ -5,8 +5,8 @@ title: Awesome Erlang Snippets
 # {{ page.title }}
 *{{ page.date | date_to_string }}*   
 ###Quick Sort
-```erlang
+<code>
 qsort([]) -> [];
 qsort([H | T]) ->
 	qsort([X || X <- T, X =< H]) ++ [H] ++ qsort([X || X <- T, X > H]).
-```
+</code>

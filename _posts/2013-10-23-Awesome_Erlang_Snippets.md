@@ -6,6 +6,6 @@ title: Awesome Erlang Snippets
 *{{ page.date | date_to_string }}*   
 ###Quick Sort
 
-> qsort([]) -> [];
-qsort([H | T]) ->
+>qsort([]) -> [];   
+qsort([H | T]) ->   
 	qsort([X || X <- T, X =< H]) ++ [H] ++ qsort([X || X <- T, X > H]).

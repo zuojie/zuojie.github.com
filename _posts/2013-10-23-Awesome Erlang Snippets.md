@@ -7,6 +7,6 @@ title: Awesome Erlang Snippets
 ###Quick Sort
 ```erlang
 qsort([]) -> [];
-qsort([H|T]) ->
+qsort([H | T]) ->
 	qsort([X || X <- T, X =< H]) ++ [H] ++ qsort([X || X <- T, X > H]).
 ```

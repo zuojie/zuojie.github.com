@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Erlang And MapReduce: ErlangMapReduceFramework 
+title: ErlangAndMapReduceErlangMapReduceFramework 
 ---
 # {{ page.title }}   
 *{{ page.date | date_to_string}}*   

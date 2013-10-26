@@ -51,15 +51,17 @@ slave节点代码：
 这次使用的是3台slave + 1台master的架构，环境都是：   
 Erlang R16B02 (erts-5.10.3) [source] [64-bit] [smp:16:16] [async-threads:10] [hipe] [kernel-poll:false]   
 节点名称分别为master，qb2，qb3，qb4   
-输入数据：
-![input](http://zuojie.github.io/demo/erlang_1.png)
+输入数据：   
+![input](http://zuojie.github.io/demo/erlang_1.png)   
 2,调用master函数，将用户函数和输入数据传入   
 首先调用单机版:   
 <pre class="prettyprint lang-erl">
 (master@QBHadoop1)4> mprd_master:start(fun(X) -> factorial:my_map(X) end, fun(X) -> factorial:my_reduce(X) end, L).   
 </pre>
 输出:   
-[1,2,6,24,120,720,5040,40320,362880,3628800,39916800,479001600,6227020800,87178291200,1307674368000,20922789888000,355687428096000,6402373705728000,121645100408832000,2432902008176640000]   
+[1,2,6,24,120,720,5040,40320,362880,3628800,39916800,479001600,   
+6227020800,87178291200,1307674368000,20922789888000,355687428096000,   
+6402373705728000,121645100408832000,2432902008176640000]   
 ![output](http://zuojie.github.io/demo/erlang_2.png)   
 然后调用集群版:   
 <pre class="prettyprint lang-erl">

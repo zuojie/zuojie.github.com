@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ErlangAndMapReduceErlangMapReduceFramework 
+title: ErlangMapReduceFramework实现小记 
 ---
 # {{ page.title }}   
 *{{ page.date | date_to_string}}*   
@@ -14,9 +14,10 @@ title: ErlangAndMapReduceErlangMapReduceFramework
 * 支持单机模式调用, 即只使用master进行计算
 * 需要用户指定map函数用于进行作业计算，和reduce函数用于进行汇总结果的处理，更像hadoop了LOL
 * 列表拆分工作由ErlangMapReduceFramework来完成，即根据参与计算的节点数量来平均分配列表，用户只需传递进一个完整列表即可
+
 ###三，用法示例
 由于系统很不成熟，用法并不像Hadoop那样有严格的规范流程，看到大跌眼镜之处请默默谅解。首先以一个简单示例入手，还是那个求斐波那契的栗子（当然你可以换成阶乘，乘方等）。这个例子是按照ErlangMapReduceFramework的标准用法来的。首先编写用户函数:
-<pre class="prettyprint lang-erl">
+<code class="prettyprint lang-erl">
 -module(factorial).                                                                
 -export([my_map/1, my_reduce/1]).                                                  
                                                                                    
@@ -37,4 +38,4 @@ my_reduce([]) ->
 my_reduce(OutDat) ->                                                               
     io:format("my reduce come in~n", []),                                          
     io:format("~w~n", [OutDat]). 
-</pre>
+</code>

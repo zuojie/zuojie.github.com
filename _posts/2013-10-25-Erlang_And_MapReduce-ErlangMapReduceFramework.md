@@ -181,7 +181,7 @@ qsort([Pivot | Rest]) ->
     SortL ++ [Pivot] ++ SortR.
 </pre>
 输出：   
-![output](http://zuojie.github.io/demo/erlang_3.png)   
+![output](http://zuojie.github.io/demo/erlang_4.png)   
 
 注意，这里的并行只是单机多进程模式，而非分布式模式。因为列表的自动拆分对排序这种情况是不适用的，可见，其并没有按照求斐波那契数列的用户函数一样调用start入口函数，而是直接调用了framework里的map函数，究其原因是系统入口函数不能很好兼容快排作业的需求，所以快排作业只好取巧用了直接调用map的方式。这也暴露了这个系统封装性做的还远远不够啊远远不够。
 ###四，总结

@@ -45,18 +45,21 @@ my_reduce(OutDat) ->
 -module(mprd_master).                                                           
 -compile(export_all).                                                           
                                                                                 
-map(Func, UserReduce, List, SlaveNum) ->                                        
-    Pid = self(),                                                               
+map(Func, UserReduce, List, SlaveNum) ->                                           
+    Pid = self(),                                                                  
     Pids = lists:map(fun(I) -> spawn(fun() -> do_work(Pid, Func, I) end) end, List),
-    case SlaveNum > 0 of                                                        
-        true -> Res = gather(Pids, SlaveNum);                                   
-        _ -> Res = Pids                                                         
-    end,                                                                        
-    R = reduce(Res),                                                            
-    UserReduce(R),                                                              
-    unregister(master).                                                            
-    %io:format("~w~n", [R]).                                                    
-    %lists:foreach(fun(X) -> print(X) end, R).                                  
+    case SlaveNum > 0 of                                                           
+        true -> Res = gather(Pids, SlaveNum);                                      
+        _ -> Res = Pids                                                            
+    end,                                                                           
+    R = reduce(Res),                                                               
+    case whereis(master) of                                                        
+        undefined ->                                                               
+            ok;                                                                    
+        _ ->                                                                       
+            unregister(master)                                                     
+    end,                                                                           
+    UserReduce(R).
                                                                                 
 reduce([]) ->                                                                   
     [];                                                                         
@@ -100,8 +103,9 @@ my_split(List, Len, NodeCnt, L) when length(List) >= Len ->
 my_split(List, Len, _, L) ->                                                    
     L.                                                                          
                                                                                 
-start(Func,UserReduce, L) ->                                                    
-    register(master, spawn(mprd_master, map, [Func, L, 0])).                    
+start(Func, UserReduce, L) ->                                                   
+    %spawn(mprd_master, map, [Func, UserReduce, L, 0]).                         
+    map(Func, UserReduce, L, 0).                     
                                                                                 
 start(SlaveNodes, Func, UserReduce, L) when length(SlaveNodes) > length(L) -1 ->
     io:format("Make sure the number of slave node is less than the length of List please!\n");
@@ -160,19 +164,25 @@ Erlang R16B02 (erts-5.10.3) [source] [64-bit] [smp:16:16] [async-threads:10] [hi
 图中红色圈出的是为每个节点分配的list。由于各个节点计算完毕的时间不同，因此结果列表和输入列表顺序是不一致的。
 
 下面再来看一个非常规用法的示例，快速排序的并行版本。   
-单机版的快排erlang代码[这里](https://github.com/zuojie/CodeBase/blob/master/Awesome_Erlang_Snippets.md)有。并行版本代码如下:
+单进程版的快排erlang代码[这里](https://github.com/zuojie/CodeBase/blob/master/Awesome_Erlang_Snippets.md)有。并行版本代码如下:
 <pre class="prettyprint lang-erl">
 -module(qsort).                                                                    
 -compile(export_all).                                                              
-                                                                                   
+my_reduce([]) ->                                                                   
+    [];                                                                            
+my_reduce(OutDat) ->                                                               
+    OutDat.                                                                        
 qsort([]) -> [];                                                                   
 qsort([Pivot]) -> [Pivot];                                                         
 qsort([Pivot | Rest]) ->                                                           
     L = [X || X <- Rest, X =< Pivot],                                              
     R = [X || X <- Rest, X > Pivot],                                               
-    [SortL, SortR] = mprd_master:map(fun qsort/1, [L, R], false),                  
+    [SortL, SortR] = mprd_master:start(fun qsort/1, fun my_reduce/1, [L, R]),   
     SortL ++ [Pivot] ++ SortR.
 </pre>
-可见，其并没有按照求斐波那契数列的用户函数一样调用start入口函数，而是直接调用了framework里的map函数，究其原因是系统入口函数不能很好兼容快排作业的需求，所以快排作业只好取巧用了直接调用map的方式。这也暴露了这个系统封装性做的还远远不够啊远远不够。
+输出：   
+![output](http://zuojie.github.io/demo/erlang_3.png)   
+
+注意，这里的并行只是单机多进程模式，而非分布式模式。因为列表的自动拆分对排序这种情况是不适用的，可见，其并没有按照求斐波那契数列的用户函数一样调用start入口函数，而是直接调用了framework里的map函数，究其原因是系统入口函数不能很好兼容快排作业的需求，所以快排作业只好取巧用了直接调用map的方式。这也暴露了这个系统封装性做的还远远不够啊远远不够。
 ###四，总结
 Erlang内置的分布式支持，对用户及其友好的的节点认证机制等特性，非常适合用来做分不是程序的开发。尤其对于数据分布在多台业务机上的情形，可以考虑使用erlang来实现一些简单的数据统计的工作。

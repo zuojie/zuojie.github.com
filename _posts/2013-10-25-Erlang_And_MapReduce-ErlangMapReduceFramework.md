@@ -42,13 +42,97 @@ my_reduce(OutDat) ->
 我们使用my_map进行阶乘的计算，使用my_reduce对最终结果进行处理，这里我们采取直接输出的做法。   
 看一下master节点的代码:
 <pre class="prettyprint lang-erl">
+-module(mprd_master).                                                           
+-compile(export_all).                                                           
+                                                                                
+map(Func, UserReduce, List, SlaveNum) ->                                        
+    Pid = self(),                                                               
+    Pids = lists:map(fun(I) -> spawn(fun() -> do_work(Pid, Func, I) end) end, List),
+    case SlaveNum > 0 of                                                        
+        true -> Res = gather(Pids, SlaveNum);                                   
+        _ -> Res = Pids                                                         
+    end,                                                                        
+    R = reduce(Res),                                                            
+    UserReduce(R),                                                              
+    unregister(master).                                                            
+    %io:format("~w~n", [R]).                                                    
+    %lists:foreach(fun(X) -> print(X) end, R).                                  
+                                                                                
+reduce([]) ->                                                                   
+    [];                                                                         
+                                                                                
+reduce([H | T]) ->                                                              
+    receive                                                                     
+        {H, Res} ->                                                             
+            [Res | reduce(T)]                                                   
+    end.                                                                        
+                                                                                
+gather(Pids, 0) ->                                                              
+    Pids;                                                                       
+                                                                                   
+gather(Pids, SlaveNum) ->                                                          
+    receive                                                                        
+        {finished, SlaveRes} ->                                                    
+            Res = lists:append(Pids, SlaveRes),                                    
+            gather(Res, SlaveNum - 1)                                              
+    end.                                                                           
+                                                                                   
+print(Ele) ->                                                                      
+    io:format("~w~n", [Ele]).                                                      
+                                                                                   
+do_work(Parent, Func, I) ->                                                        
+    Parent ! {self(), (catch Func(I))}.                                            
+                                                                                   
+my_spawn({SlaveNode, L}, Func) ->                                                  
+    spawn(SlaveNode, mprd_slave, map, [Func, L, master, node()]).                  
+                                                                                   
+my_split([], _, _, L) ->                                                           
+    L;                                         
+my_split(List, Len, NodeCnt, L) when length(List) >= Len ->                        
+    case length(L) of                                                              
+        NodeCnt  ->                                                                
+            [List | L];                                                            
+        _ ->                                                                    
+            {H, T} = lists:split(Len, List),                                    
+            my_split(T, Len, NodeCnt, [H | L])                                  
+    end;                                                                        
+                                                                                
+my_split(List, Len, _, L) ->                                                    
+    L.                                                                          
+                                                                                
+start(Func,UserReduce, L) ->                                                    
+    register(master, spawn(mprd_master, map, [Func, L, 0])).                    
+                                                                                
+start(SlaveNodes, Func, UserReduce, L) when length(SlaveNodes) > length(L) -1 ->
+    io:format("Make sure the number of slave node is less than the length of List please!\n");
+                                                                                
+start(SlaveNodes, Func, UserReduce, L) ->                                       
+    % slave + master                                                            
+    Nodes = length(SlaveNodes) + 1,                                             
+    Len = length(L) div Nodes,                                                  
+    [H | Lists] = my_split(L, Len, length(SlaveNodes), []),                     
+    io:format("Master: ~w~n", [H]),                                             
+    XS = lists:zip(SlaveNodes, Lists),                                          
+    io:format("~p~n", [XS]),                                                    
+    register(master, spawn(mprd_master, map, [Func, UserReduce, H, length(SlaveNodes)])),
+    [my_spawn(X, Func) || X <- XS],                                             
+    ok.
 </pre>
 slave节点代码：
 <pre class="prettyprint lang-erl">
+-module(mprd_slave).                                                               
+-compile(export_all).                                                              
+                                                                                   
+map(Func, List, MasterName, MasterNode) ->                                         
+    Pids = lists:map(fun(I) -> spawn(fun() -> do_work(MasterName, MasterNode, Func, I) end) end, List),
+    {MasterName, MasterNode} ! {finished, Pids}.                                   
+                                                                                   
+do_work(MasterName, MasterNode, Func, I) ->                                        
+    {MasterName, MasterNode} ! {self(), (catch Func(I))}.
 </pre>
 用法如下：    
 1,环境准备，生成输入数据   
-这次使用的是3台slave + 1台master的架构，环境都是：   
+这次使用的是3台slave + 1台master的架构，环境都是Centos X64, erlang版本为：   
 Erlang R16B02 (erts-5.10.3) [source] [64-bit] [smp:16:16] [async-threads:10] [hipe] [kernel-poll:false]   
 节点名称分别为master，qb2，qb3，qb4   
 输入数据：   
@@ -63,14 +147,31 @@ Erlang R16B02 (erts-5.10.3) [source] [64-bit] [smp:16:16] [async-threads:10] [hi
 6227020800,87178291200,1307674368000,20922789888000,355687428096000,   
 6402373705728000,121645100408832000,2432902008176640000]   
 ![output](http://zuojie.github.io/demo/erlang_2.png)   
-然后调用集群版:   
+然后是调用集群版:   
 <pre class="prettyprint lang-erl">
-(master@QBHadoop1)4> mprd_master:start(fun(X) -> factorial:my_map(X) end, fun(X) -> factorial:my_reduce(X) end, L).   
+(master@QBHadoop1)2> Slaves=[qb2@QBHadoop2, qb3@QBHadoop3, qb4@QBHadoop4].   
+(master@QBHadoop1)4> mprd_master:start(Slaves, fun(X) -> factorial:my_map(X) end, fun(X) -> factorial:my_reduce(X) end, L).
 </pre>
+输出：   
+[20922789888000,355687428096000,6402373705728000,121645100408832000,   
+2432902008176640000,39916800,479001600,6227020800,   
+87178291200,1307674368000,720,5040,40320,362880,3628800,1,2,6,24,120]   
+![output](http://zuojie.github.io/demo/erlang_3.png)   
+图中红色圈出的是为每个节点分配的list。由于各个节点计算完毕的时间不同，因此结果列表和输入列表顺序是不一致的。
 
-再来看一个非常规用法的示例，快速排序的并行版本。   
+下面再来看一个非常规用法的示例，快速排序的并行版本。   
 单机版的快排erlang代码[这里](https://github.com/zuojie/CodeBase/blob/master/Awesome_Erlang_Snippets.md)有。并行版本代码如下:
 <pre class="prettyprint lang-erl">
+-module(qsort).                                                                    
+-compile(export_all).                                                              
+                                                                                   
+qsort([]) -> [];                                                                   
+qsort([Pivot]) -> [Pivot];                                                         
+qsort([Pivot | Rest]) ->                                                           
+    L = [X || X <- Rest, X =< Pivot],                                              
+    R = [X || X <- Rest, X > Pivot],                                               
+    [SortL, SortR] = mprd_master:map(fun qsort/1, [L, R], false),                  
+    SortL ++ [Pivot] ++ SortR.
 </pre>
 可见，其并没有按照求斐波那契数列的用户函数一样调用start入口函数，而是直接调用了framework里的map函数，究其原因是系统入口函数不能很好兼容快排作业的需求，所以快排作业只好取巧用了直接调用map的方式。这也暴露了这个系统封装性做的还远远不够啊远远不够。
 ###四，总结

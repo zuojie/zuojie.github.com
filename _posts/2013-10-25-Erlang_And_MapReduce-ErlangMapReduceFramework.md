@@ -124,7 +124,9 @@ Erlang R16B02 (erts-5.10.3) [source] [64-bit] [smp:16:16] [async-threads:10] [hi
 2,调用master函数，将用户函数和输入数据传入   
 首先是单机版:   
 <pre class="prettyprint lang-erl">
+
 (master@QBHadoop1)4> mprd_master:start(fun(X) -> factorial:my_map(X) end, fun(X) -> factorial:my_reduce(X) end, L).   
+
 </pre>
 输出:   
 [1,2,6,24,120,720,5040,40320,362880,3628800,39916800,479001600,   

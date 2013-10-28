@@ -17,7 +17,7 @@ title: ErlangMapReduceFramework实现小记
 
 ###三，用法示例
 由于系统很不成熟，用法并不像Hadoop那样有严格的规范流程，看到大跌眼镜之处请默默谅解。   
-首先以一个简单示例入手，还是那个求斐波那契的栗子（当然你可以换成阶乘，乘方等）。这个例子是按照ErlangMapReduceFramework的标准用法来的。首先编写用户函数:
+首先以一个简单示例入手，还是那个求阶乘的栗子（当然你可以换成斐波那契数列，乘方等）。这个例子是按照ErlangMapReduceFramework的标准用法来的。首先编写用户函数:
 <pre class="prettyprint lang-erl">
 -module(factorial).                                                                
 -export([my_map/1, my_reduce/1]).                                                  

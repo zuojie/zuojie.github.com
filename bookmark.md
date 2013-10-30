@@ -12,6 +12,7 @@
 * [Erlang文件讀寫](http://mooooscar.blogspot.com/2009/03/erlang-programming-with-files.html)
 * [Python语法解析器PLY——lex and yacc in Python](http://blog.csdn.net/chosen0ne/article/details/8077880)
 * [Python函数式编程指南：目录和参考 ](http://www.cnblogs.com/huxi/archive/2011/07/15/2107536.html)
+* [Hessian 原理分析](http://hi.baidu.com/ecspell/item/b4a284cd18d8473299b498ad)
 * [网站统计中的数据收集原理及实现](http://blog.codinglabs.org/articles/how-web-analytics-data-collection-system-work.html)
 * [《机器学习实战》作者Peter Harrington：如何成为一位数据科学家（图灵访谈）](http://blog.csdn.net/wdxin1322/article/details/12186441)
 

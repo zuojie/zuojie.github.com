@@ -18,6 +18,7 @@
 
 ####Blog
 * [spongeliu's blog](http://www.spongeliu.com/)
+* [个人订阅的10佳博客与相关介绍](http://hedengcheng.com/?p=676)
 * [preshing.com](http://preshing.com/)
 * [业界良心](http://www.lfd.uci.edu/~gohlke/pythonlibs)
 * [Python extensions to do machine learning](http://www.xavierdupre.fr/blog/2013-09-15_nojs.html)

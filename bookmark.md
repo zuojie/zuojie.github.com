@@ -26,3 +26,8 @@
 ####Book
 * [High-Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545/index.html)
 * [Frequently Asked Questions about Erlang](http://www.erlang.org/faq/faq.html)
+* 
+####验证码识别
+* [用Python+PIL进行图像处理](http://wenku.baidu.com/view/6a41fff4f61fb7360b4c658d.html)
+* [如何识别高级的验证码](http://huaidan.org/archives/2085.html)
+* [常见验证码的弱点与验证码识别](http://drops.wooyun.org/tips/141)

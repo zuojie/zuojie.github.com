@@ -1,5 +1,6 @@
 ####Article
 * [系统调用的实现原理](http://blog.csdn.net/chosen0ne/article/details/7721550) 
+* [11.7.3 Temporaries May Vanish Before You Expect](http://gcc.gnu.org/onlinedocs/gcc/Temporaries.html)
 * [如何高效利用GitHub](http://www.yangzhiping.com/tech/github.html)
 * [如何利用WHOIS查询IP的来源](http://www.bitscn.com/network/hack/200607/29352.html)
 * [JS跨域请求](http://blog.csdn.net/chosen0ne/article/details/7333626)

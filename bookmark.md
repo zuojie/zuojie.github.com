@@ -34,3 +34,4 @@
 * [用Python+PIL进行图像处理](http://wenku.baidu.com/view/6a41fff4f61fb7360b4c658d.html)
 * [如何识别高级的验证码](http://huaidan.org/archives/2085.html)
 * [常见验证码的弱点与验证码识别](http://drops.wooyun.org/tips/141)
+* [我们身边的验证码技术](http://everet.org/2012/07/captcha-around-us.html)

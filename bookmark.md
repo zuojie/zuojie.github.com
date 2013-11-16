@@ -5,6 +5,7 @@
 * [如何利用WHOIS查询IP的来源](http://www.bitscn.com/network/hack/200607/29352.html)
 * [JS跨域请求](http://blog.csdn.net/chosen0ne/article/details/7333626)
 * [NFA转DFA与DFA化简](http://blog.163.com/it_novice/blog/static/2091830692013465450493/)
+* [DFA和NFA](http://hooopo.iteye.com/blog/548087)
 * [操作系统启动之谜](http://oilbeater.com/2012/06/29/the-secret-of-os-startup/)
 * [python资源包](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
 * [深入分析Linux自旋锁](http://blog.chinaunix.net/uid-20543672-id-3252604.html)

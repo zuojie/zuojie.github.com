@@ -28,6 +28,7 @@
 * [preshing.com](http://preshing.com/)
 * [业界良心](http://www.lfd.uci.edu/~gohlke/pythonlibs)
 * [Python extensions to do machine learning](http://www.xavierdupre.fr/blog/2013-09-15_nojs.html)
+* [编译原理学习交流园地](http://blog.163.com/ppt_compiler/blog/#m=0)
 
 ####Book
 * [High-Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545/index.html)

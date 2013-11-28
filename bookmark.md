@@ -34,6 +34,8 @@
 ####Book
 * [High-Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545/index.html)
 * [Frequently Asked Questions about Erlang](http://www.erlang.org/faq/faq.html)
+* [CPU自制入门](http://www.ituring.com.cn/book/1142)
+* [自制编程语言](http://www.ituring.com.cn/book/1159)
 
 ####验证码识别
 * [用Python+PIL进行图像处理](http://wenku.baidu.com/view/6a41fff4f61fb7360b4c658d.html)

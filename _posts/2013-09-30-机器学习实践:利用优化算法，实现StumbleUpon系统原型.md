@@ -1,6 +1,7 @@
 ---
 layout: default
-title: 机器学习实践:利用优化算法，实现StumbleUpon系统原型
+title: 机器学习实践：利用优化算法，实现StumbleUpon系统原型
+meta: 机器学习,Machine Learning,Optimize Algorithm,集体智慧编程,Programming Collective Intelligence,Stumble Upon,网址推荐,推荐系统,模拟退火,遗传算法
 ---
 # {{ page.title }}
 *{{ page.date | date_to_string}}*

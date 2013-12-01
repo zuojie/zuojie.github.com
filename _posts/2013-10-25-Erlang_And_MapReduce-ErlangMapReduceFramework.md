@@ -1,6 +1,7 @@
 ---
 layout: default
 title: ErlangMapReduceFramework实现小记 
+meta: erlang,mapreduce,并发编程,分布式框架,hadoop
 ---
 # {{ page.title }}   
 *{{ page.date | date_to_string}}*   

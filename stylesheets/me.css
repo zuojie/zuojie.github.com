@@ -1,0 +1,107 @@
+
+body {
+	margin: 0px;
+		font-family: 'Lucida Grande', 'Trebuchet MS', arial, Helvetica, sans-serif;
+			background-color: rgb(80,80,80);
+			}
+
+			#container
+			{
+			position: absolute;
+			left: 160px;
+			width: 900px;
+			/*width: 70%;*/
+			margin: 20px auto;
+			color: #333;
+			border: 1px solid gray;
+			line-height: 120%;
+			background-color: rgb(255,255,255);
+			}
+
+			#top
+			{
+			padding: 0.5em;
+			padding-left: 1em;
+			background-color: #eee;
+			border-bottom: 1px solid gray;
+			}
+			#top a:link {color:rgb(153,0,0); text-decoration:none;}	  
+			#top a:visited {color:rgb(153,0,0); text-decoration:none;}	  
+			#top a:active {color:black}
+			#top a:hover   {color:rgb(153,0,0)}
+
+			#top h1
+			{
+			padding: 0;
+			margin: 0;
+			}
+
+			#nav
+			{
+			position: fixed;
+			top: 80px;
+			left: 60px;
+			width: 100px;
+			/*border-left: 1px solid gray;
+			border-bottom: 1px solid gray;*/
+			font-family: verdana, arial, 'sans serif'; 
+			/*float: right;
+			width: 120px;*/
+			margin: 0;
+			padding: 1em;
+			line-height: 120%;
+			font-size: large;
+			font-weight: bold;
+			}
+
+			#nav li {
+			margin-bottom: 2px;
+			}
+
+			#nav a {
+			display: block;
+			padding: 6px 12px 7px;
+			background-color: #3c738c;
+			}
+
+			/*#rightnav p { margin: 0 0 1em 0; }*/
+			#nav a:link {color:white; text-decoration:none;}	  
+			#nav a:visited {color:white; text-decoration:none;}	  
+			#nav a:active {color:white}
+			#nav a:hover {color:yellow}
+
+			#nav a.select {
+			color: yellow;
+			}
+
+			#content
+			{
+			/*margin-right: 160px;*/
+			border-left: 1px solid gray;
+			padding: 1em;
+			background-color: white;
+			}
+
+			#content a:link {color:blue; text-decoration:none;}	  
+			#content a:visited {color:blue; text-decoration:none;}	  
+			#content a:hover {color:red}
+
+			#footer
+			{
+			clear: both;
+			margin: 0;
+			padding: .5em;
+			color: #333;
+			background-color: #eee;
+			border-top: 1px solid gray;
+			}
+
+			#content h2 { margin: 0 0 .5em 0; }
+
+			.floatright
+			{
+			float: right;
+			margin: 0 0 10px 10px;
+			padding: 2px;
+			}
+

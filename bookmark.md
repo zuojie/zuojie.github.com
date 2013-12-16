@@ -8,6 +8,7 @@
 * [词法分析(NFA与DFA)](http://www.cppblog.com/woaidongmao/archive/2009/09/25/97245.aspx)
 * [DFA和NFA](http://hooopo.iteye.com/blog/548087)
 * [操作系统启动之谜](http://oilbeater.com/2012/06/29/the-secret-of-os-startup/)
+* [linux网络编程之TCP/IP基础（一）：TCP/IP协议栈与数据报封装](http://blog.csdn.net/jnu_simba/article/details/8957242)
 * [python资源包](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
 * [深入分析Linux自旋锁](http://blog.chinaunix.net/uid-20543672-id-3252604.html)
 * [微扯蛋:工程师的价值和cy分类法](http://blog.cydu.net/2012/09/cy_values_classified.html)

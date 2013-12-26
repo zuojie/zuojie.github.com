@@ -20,6 +20,7 @@
 * [Python函数式编程指南：目录和参考 ](http://www.cnblogs.com/huxi/archive/2011/07/15/2107536.html)
 * [Hessian 原理分析](http://hi.baidu.com/ecspell/item/b4a284cd18d8473299b498ad)
 * [时钟周期、振荡周期、机器周期、CPU周期、状态周期、指令周期、总线周期、任务周期](http://blog.csdn.net/yangtalent1206/article/details/5853017)
+* [位运算](http://graphics.stanford.edu/~seander/bithacks.html)
 * [网站统计中的数据收集原理及实现](http://blog.codinglabs.org/articles/how-web-analytics-data-collection-system-work.html)
 * [《机器学习实战》作者Peter Harrington：如何成为一位数据科学家（图灵访谈）](http://blog.csdn.net/wdxin1322/article/details/12186441)
 

@@ -28,6 +28,7 @@
 
 ####Blog
 * [spongeliu's blog](http://www.spongeliu.com/)
+* [王益](http://cxwangyi.github.io/)
 * [个人订阅的10佳博客与相关介绍](http://hedengcheng.com/?p=676)
 * [preshing.com](http://preshing.com/)
 * [业界良心](http://www.lfd.uci.edu/~gohlke/pythonlibs)

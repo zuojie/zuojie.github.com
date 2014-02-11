@@ -28,6 +28,7 @@
 
 ####Blog
 * [spongeliu's blog](http://www.spongeliu.com/)
+* [Google Research](http://research.google.com/pubs/papers.html)
 * [王益](http://cxwangyi.github.io/)
 * [个人订阅的10佳博客与相关介绍](http://hedengcheng.com/?p=676)
 * [preshing.com](http://preshing.com/)

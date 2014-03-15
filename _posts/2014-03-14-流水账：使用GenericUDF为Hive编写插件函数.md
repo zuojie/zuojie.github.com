@@ -19,16 +19,20 @@ Hive官方没有提供GenericUDF的编写指导文档，官方维护的doc地址
 ####动手写GenericUDF
 这部分网上很多教程，这里主要说一些自己总结的点，实现自己的GUDF首先继承父类[GenericUDF](http://hive.apache.org/javadocs/r0.10.0/api/org/apache/hadoop/hive/ql/udf/generic/GenericUDF.html)，实现里边的3个方法即可：   
 **initialize(ObjectInspector[] arguments)**   
+
 * initialize函数需要注意一点是其返回值要和你的扩展函数最终返回值保持一致；另外用户输入参数的合法性检查主要
 也是在这里进行
 
-**evaluate(GenericUDF.DeferredObject[] arguments)**    
+**evaluate(GenericUDF.DeferredObject[] arguments)**   
+
 * 你的扩展函数逻辑主要在这里实现
 
 **getDisplayString(String[] children)** 
+
 * 里面写一些介绍性信息，在用户对sql语句进行explain的时候显示。我想你用膝盖也能想到这和@Description里的内容是在不同场合显示的，后者在用户使用desc function命令的时候显示函数介绍
 
-代码以一个转换中文国家名为数字id的UDF为例，输入2个参数，第一个参数为国家名，第二个参数为假设国家名找不到输出的默认值。上码：
+代码以一个转换中文国家名为数字id的UDF为例，输入2个参数，第一个参数为国家名，第二个参数为假设国家名找不到输出的默认值。上码：  
+
 ```java
 package com.arvinpeng.udf;
 import java.util.Hashtable;

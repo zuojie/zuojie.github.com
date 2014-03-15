@@ -156,6 +156,6 @@ hive>select arvin_loc('中国', '-1') from dual;
 hive>select arvin_loc('中国', '-1') from dual;   
 86     
 
-it worker，流水账毕。
+it worked，流水账毕。
 
 

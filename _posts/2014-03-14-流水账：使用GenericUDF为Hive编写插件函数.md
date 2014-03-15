@@ -7,7 +7,7 @@ meta: Hive, GenericUDF
 *{{ page.date | date_to_string }}*
 
 Hive官方没有提供GenericUDF的编写指导文档，官方维护的doc地址也经常变来变去导致google的不少链接404。比起Hadoop的javadoc，hive的有点敷衍了事，在上面找一些参考资料根本就get不到point。   
-在官方没提供比较详细的GenericUDF编写指导前提下，我们还有一个比较好的方法，就是去[hive的源码](https://github.com/apache/hive)里寻找答案。我们可以在github上hive项目下直接搜索GenericUDF，你会分别在：*hive/ql/src/java/org/apache/hadoop/hive/ql/udf/generic*和*hive/itests/util/src/main/java/org/apache/hadoop/hive/ql/udf/generic*下找到很多hive内置的很多对GenericUDF的实现，比如nvl啦，case when啦，if啦等等。其中后边的目录里是一些基础问题的指导，比如UDF里怎么获取外部传递过来的string之类的，前者是hive内置外发的扩展函数，主打实战。按照你的GenericUDF功能需求寻找相应的实现参考一下即可。   
+在官方没提供比较详细的GenericUDF编写指导前提下，我们还有一个比较好的方法，就是去[hive的源码](https://github.com/apache/hive)里寻找答案。我们可以在github上hive项目下直接搜索GenericUDF，你会分别在：*hive/ql/src/java/org/apache/hadoop/hive/ql/udf/generic*和*hive/itests/util/src/main/java/org/apache/hadoop/hive/ql/udf/generic*下找到很多hive内置的很多对GenericUDF的实现，比如nvl啦，case when啦，if啦等等。其中后边的目录里是一些基础问题的指导，比如UDF里怎么获取外部传递过来的string之类的，前者是hive内置随官方Hive安装包外发的扩展函数，主打实战。按照你的GenericUDF功能需求寻找相应的实现参考一下即可。   
 本文要点如下：   
 
 * 编写GenericUDF一般流程简述 

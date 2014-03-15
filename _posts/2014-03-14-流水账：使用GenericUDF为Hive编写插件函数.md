@@ -16,7 +16,7 @@ Hive官方没有提供GenericUDF的编写指导文档，官方维护的doc地址
 
 本次实现基于**Hive-0.12.0**和**hadoop-1.2.1**。   
 
-####动手写GenericUDF
+###动手写GenericUDF
 这部分网上很多教程，这里主要说一些自己总结的点，实现自己的GUDF首先继承父类[GenericUDF](http://hive.apache.org/javadocs/r0.10.0/api/org/apache/hadoop/hive/ql/udf/generic/GenericUDF.html)，实现里边的3个方法即可：   
 **initialize(ObjectInspector[] arguments)**   
 
@@ -146,13 +146,16 @@ public class Loc2ID extends GenericUDF {
 * 7、add jar /data/qb/mr/Loc2ID.jar;
 * 8、create temporary function arvin_loc as 'com.arvinpeng.udf.Loc2ID';            
 
-我这边的hive编码环境是gbk，其中1编译时由于代码文件中含有中文，所以编译时指定-encoding选项，否则报警告；3、4、5步非必需执行；6就是添加外部引用资源的方式，我的扩展里需要读取country2id文件中的内容，目测添加到hive之后你的jar包和资源文件在同一个目录，所以之后代码里直接使用相对路径即可；8便是注册函数名；注意，每次更新你自己的jar文件后只需重新执行7即可使更新生效。所有这些完成后就可以测试了：   
+我这边的hive编码环境是gbk，其中1编译时由于代码文件中含有中文，所以编译时指定-encoding选项，否则报警告；3、4、5步非必需执行；6就是添加外部引用资源的方式，我的扩展里需要读取country2id文件中的内容，目测添加到hive之后你的jar包和资源文件在同一个目录，所以之后代码里直接使用相对路径即可；8便是注册函数名；注意，每次更新你自己的jar文件后只需重新执行7即可使更新生效。所有这些完成后就可以测试了。   
+
+###中文乱码
+
 hive>select arvin_loc('中国', '-1') from dual;   
 -1   
-出现问题，我的文件里肯定是有中国对应的数字id的，但是函数却没找到，经过排查，发现我的hive环境是gbk编码，所以读入时编码出错，导致hashtable里存的是乱码，自然就找不到“中国”对应的id了。强行指定java按照utf8编码读入文件即可（处理方式参考上面代码），另外推荐一个对java中文乱码比较好的解释[java字符编码原理浅析](http://blog.csdn.net/abing37/article/details/5571963)再次尝试：   
+出现问题，我的文件里肯定是有中国对应的数字id的，但是函数却没找到，经过排查，发现我的hive环境是gbk编码，所以读入时编码出错，导致hashtable里存的是乱码，自然就找不到“中国”对应的id了。强行指定java按照utf8编码读入文件即可（处理方式参考上面代码，推荐一个对java中文乱码比较好的解释[java字符编码原理浅析](http://blog.csdn.net/abing37/article/details/5571963)），再次尝试：   
 hive>select arvin_loc('中国', '-1') from dual;   
 86     
 
-流水账毕。
+it worker，流水账毕。
 
 

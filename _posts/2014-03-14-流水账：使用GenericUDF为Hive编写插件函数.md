@@ -29,7 +29,7 @@ Hive官方没有提供GenericUDF的编写指导文档，官方维护的doc地址
 
 **getDisplayString(String[] children)** 
 
-* 里面写一些介绍性信息，在用户对sql语句进行explain的时候显示。我想你用膝盖也能想到这和@Description里的内容是在不同场合显示的，后者在用户使用desc function命令的时候显示函数介绍
+* 里面写一些介绍性信息，在用户对sql语句进行explain的时候显示。用膝盖也能想到这和@Description里的内容是在不同场合展示的，后者在用户使用desc function命令的时候显示函数介绍
 
 代码以一个转换中文国家名为数字id的UDF为例，输入2个参数，第一个参数为国家名，第二个参数为假设国家名找不到输出的默认值。上码：  
 

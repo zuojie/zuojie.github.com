@@ -18,6 +18,7 @@
 * [erlang调用外部程序如何得到其退出状态](http://blog.csdn.net/skymanwu/article/details/8284373)
 * [深入理解拉格朗日乘子法（Lagrange Multiplier) 和KKT条件](http://blog.csdn.net/xianlingmao/article/details/7919597)
 * [《编程机制探析》第十七章 函数式编程](http://buaawhl.iteye.com/blog/1160429)
+* [异常模拟测试 -- 场景抽象及解决方案](http://baidutech.blog.51cto.com/4114344/744429#559183-tsina-1-40225-ed0973a0c870156ed15f06a6573c8bf0)
 * [Erlang文件讀寫](http://mooooscar.blogspot.com/2009/03/erlang-programming-with-files.html)
 * [Python语法解析器PLY——lex and yacc in Python](http://blog.csdn.net/chosen0ne/article/details/8077880)
 * [Python函数式编程指南：目录和参考 ](http://www.cnblogs.com/huxi/archive/2011/07/15/2107536.html)

@@ -10,7 +10,7 @@
 * [NFA转DFA与DFA化简](http://blog.163.com/it_novice/blog/static/2091830692013465450493/)
 * [词法分析(NFA与DFA)](http://www.cppblog.com/woaidongmao/archive/2009/09/25/97245.aspx)
 * [DFA和NFA](http://hooopo.iteye.com/blog/548087)
-* [机器学习中的算法(2)-支持向量机(SVM)基础]http://www.cnblogs.com/LeftNotEasy/archive/2011/05/02/basic-of-svm.html
+* [机器学习中的算法(2)-支持向量机(SVM)基础](http://www.cnblogs.com/LeftNotEasy/archive/2011/05/02/basic-of-svm.html)
 * [操作系统启动之谜](http://oilbeater.com/2012/06/29/the-secret-of-os-startup/)
 * [linux网络编程之TCP/IP基础（一）：TCP/IP协议栈与数据报封装](http://blog.csdn.net/jnu_simba/article/details/8957242)
 * [python资源包](http://www.lfd.uci.edu/~gohlke/pythonlibs/)

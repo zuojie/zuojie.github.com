@@ -47,6 +47,7 @@ Storm的依赖软件比较多，需要装Python、zookeeper、zeromq以及jzmq�
 ###1.6 安装配置Storm
 **墙裂建议安装不低于0.8.2版本的storm，我当时装了0.8.1，结果打包storm-starter测试代码时报错： 
 import backtype.storm.task.IMetricsContext找不到，换成0.8.2即可。**   
+
 * 安装过程略，解压即用。
 * 在~/.bashrc追加：   
 ***export STORM_HOME="/home/arvinpeng/proj/storm"***   
@@ -54,10 +55,11 @@ import backtype.storm.task.IMetricsContext找不到，换成0.8.2即可。**
 
 到此为止单机版的Storm就安装完毕了。
 
-###1.7，测试一下本地模式的WordCount
+###1.7 测试一下本地模式的WordCount
 Github里有一个例子叫做storm_starter，我们可以用它来做测试。   
 我们用eclipse打包后进行上传。  
 注意，我的storm安装在命令行linux下，打包是在windows的eclipse里进行。   
+
 * 安装twitter4j-4.0.1   
 **unzip twitter4j-4.0.1.zip**
 * 追加源文件storm-start/src/jvm/storm   

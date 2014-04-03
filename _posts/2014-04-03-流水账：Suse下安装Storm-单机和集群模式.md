@@ -33,7 +33,7 @@ Storm的依赖软件比较多，需要装Python、zookeeper、zeromq以及jzmq�
 * 执行**ldconfig**命令刷新动态装入程序(ld.so)所需的连接和缓存文件（缓存文件默认为/etc/ld.so.cache）   
 **sudo ldconfig**
 
-###1.5 安装jzmq
+###1.5 安装jzmq   
 注意要在zmq之后安装，jzmq依赖zmq。   
 * 下载jzmq-master.zip，https://github.com/zeromq/jzmq
 * **unzip** jzmq-master.zip

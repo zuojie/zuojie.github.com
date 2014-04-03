@@ -34,7 +34,7 @@ Storm的依赖软件比较多，需要装Python、zookeeper、zeromq以及jzmq�
 **sudo ldconfig**
 
 ###1.5 安装jzmq
-注意要在zmq之后安装，jzmq依赖zmq。
+注意要在zmq之后安装，jzmq依赖zmq。   
 * 下载jzmq-master.zip，https://github.com/zeromq/jzmq
 * **unzip** jzmq-master.zip
 * **cd** jzmq-master   

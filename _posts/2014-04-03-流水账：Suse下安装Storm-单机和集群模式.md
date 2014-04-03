@@ -35,13 +35,13 @@ Storm的依赖软件比较多，需要装Python、zookeeper、zeromq以及jzmq�
 
 ###1.5 安装jzmq   
 注意要在zmq之后安装，jzmq依赖zmq。   
-* 下载jzmq-master.zip，https://github.com/zeromq/jzmq
-* **unzip** jzmq-master.zip
-* **cd** jzmq-master   
-**./autogen.sh**（此脚本中调用了**autoreconf**命令，如果找不到这个命令，使用**which**命令查看一下命令路径，可能和$PATH中的不一致，给augogen.sh中的autoreconf加上绝对路径即可）
-* **./configure**
-* **make**
-* **make install**
+* 下载jzmq-master.zip，https://github.com/zeromq/jzmq   
+* **unzip** jzmq-master.zip   
+* **cd** jzmq-master      
+**./autogen.sh**（此脚本中调用了**autoreconf**命令，如果找不到这个命令，使用**which**命令查看一下命令路径，可能和$PATH中的不一致，给augogen.sh中的autoreconf加上绝对路径即可）   
+* **./configure**   
+* **make**   
+* **make install**    
 
 ###1.6 安装配置Storm
 **墙裂建议安装不低于0.8.2版本的storm，我当时装了0.8.1，结果打包storm-starter测试代码时报错： 

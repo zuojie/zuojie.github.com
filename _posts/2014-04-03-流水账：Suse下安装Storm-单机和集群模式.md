@@ -137,6 +137,7 @@ bin/zkCli.sh ls /
 storm的配置文件是storm.yaml，每台机器配置成一样。   
 这个脚本文件写的不咋地，所以在配置时一定注意在每一项的开始时要加空格，冒号后也必须要加空格，否则storm就不认识这个配置文件了，切记。   
 接下来，我们来看一下这个配置文件怎么配置，同样，标红的就是需要修改的地方。   
+![p8](/demo/blog_img/storm_p8.png)   
 
 说明一下：storm.local.dir表示storm需要用到的本地目录。nimbus.host表示那一台机器是master机器，即nimbus。storm.zookeeper.servers表示哪几台机器是zookeeper服务器。storm.zookeeper.port表示zookeeper的端口号，这里一定要与zookeeper配置的端口号一致，否则会出现通信错误，切记切记。当然你也可以配superevisor.slot.port，supervisor.slots.ports表示supervisor节点的槽数，就是最多能跑几个worker进程（每个sprout或bolt默认只启动一个worker，但是可以通过conf修改成多个）。   
 至此，我们的storm集群就配置好了。   

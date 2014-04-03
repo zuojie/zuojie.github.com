@@ -155,6 +155,8 @@ storm还提供了一个可视化的工具，我们通过在主节点上输入命
 ![p10](/demo/blog_img/storm_p10.png)    
 
 如上，启动成功。   
-查看一下ui，如果可以在ui中监视到，表明启动成功，从此我们的WordCount_1就正常地跑起来了。  
+查看一下ui，如果可以在ui中监视到，表明启动成功，从此我们的WordCount_1就正常地跑起来了，这个就是传说中的topology。  
 ![p11](/demo/blog_img/storm_p11.png)    
 
+如果想杀死这个topology，运行以下命令：   
+**storm kill WordCount_1**

@@ -9,10 +9,12 @@ meta: Storm,linux
 #1. 安装单机版   
 Storm的依赖软件比较多，需要装Python、zookeeper、zeromq以及jzmq，然后才是storm的安装。   
 ###1.1 安装Python2.7.x   
-* 编译安装过程略    
-###1.2 安装java, jdk 1.6.x   
+* 编译安装过程略   
+
+###1.2 安装jdk 1.6.x   
 * 解压tar包即可使用，更高版本的jdk未测试，应该也可以。   
-以下bashrc中的java，zookeeper等bin路径均用ln -s做了软链，主路径不再带版本号，如下：
+以下bashrc中的java，zookeeper等bin路径均用ln -s做了软链，主路径不再带版本号，如下：   
+![sd](demo/blog_img/storm_p1.png)
 * 在~/.bashrc中追加：   
  ***export JAVA_HOME="/home/arvinpeng/proj/jdk"***   
  ***export PATH=$JAVA_HOME/bin:$PATH:/sbin***   

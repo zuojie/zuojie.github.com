@@ -101,7 +101,7 @@ source: 2:3, stream: 1, id: {}, [golda!!!]
 加入：   
 10.1.152.80   storm_supervisor1   
 10.1.152.119   storm_nimbus   
-###2.2 首先按照单机安装模式把所有环境都装好,然后我们开始进行配置   
+###2.2 首先按照单机安装模式把集群中每台机器的环境都装好,然后我们开始进行配置   
 ###2.3 配置zookeeper   
 由于zookeeper的算法是要求单数台机器完成，所以在配置的时候必须注意zookeeper要配置单数台机器，配置偶数台机器会出现一些无法预知的错误。在这2台机器中，我们选择storm_nimbus安装zookeeper（按照1.3）。   
 接下来配置zookeeper（注意这里是重点）：   
@@ -144,7 +144,7 @@ storm还提供了一个可视化的工具，我们通过在主节点上输入命
 **ui.port: 9090**   
 更多storm配置修改，参考[Storm配置项详解](http://www.alidata.org/archives/2118)。   
 那我们跑一下WordCount：   
-* **storm jar StormStarter.jar storm.starter.WordCountTopology WordCount_1**   
+**storm jar StormStarter.jar storm.starter.WordCountTopology WordCount_1**   
 * ![p10](/demo/blog_img/storm_p10.png)    
 
 如上，启动成功。   

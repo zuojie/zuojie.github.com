@@ -79,6 +79,7 @@ Github里有一个例子叫做storm_starter，我们可以用它来做测试。
 **此时我的eclipse里报语法错，有个CircularFifoBuffer类找不到:**     
 **org.apache.commons.collections.buffer.CircularFifoBuffer**   
 **这个类在commons.collections-{version}.jar里，搜索一下下载下来导入到项目里即可。我用的版本是：commons.collections-3.2.1.jar**   
+
 * JAR export   
     File -> Export -> JAR -> JAR file -> 取消 “.classpath” ，“.project” 和 “<.settings” ->的勾 browse ->    path/to/export/name.jar -> Finish (忽视 warnings)   
 ![p4](/demo/blog_img/storm_p4.png)    
@@ -86,6 +87,7 @@ Github里有一个例子叫做storm_starter，我们可以用它来做测试。
 ![p5](/demo/blog_img/storm_p5.png)   
 
 忽略即可。   
+
 * 执行刚才编译的文件，建议把输出重定向到文件，方便查看输出log。   
 **storm** jar StormStarter.jar storm.starter.ExclamationTopology > run.log  
 如果出现类似下面的文字，说明运行成功！  
@@ -148,6 +150,7 @@ storm还提供了一个可视化的工具，我们通过在主节点上输入命
 更多storm配置修改，参考[Storm配置项详解](http://www.alidata.org/archives/2118)。   
 那我们跑一下WordCount：   
 **storm jar StormStarter.jar storm.starter.WordCountTopology WordCount_1**   
+
 * ![p10](/demo/blog_img/storm_p10.png)    
 
 如上，启动成功。   

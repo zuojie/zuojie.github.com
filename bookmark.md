@@ -1,5 +1,6 @@
 ####Article
 * [系统调用的实现原理](http://blog.csdn.net/chosen0ne/article/details/7721550) 
+* [Buffer Overflows](http://www.spectrumcoding.com/tutorials/exploits/2013/05/27/buffer-overflows.html)
 * [Errata for flex & bison](http://www.oreilly.com/catalog/errata.csp?isbn=9780596155988)
 * [Linux下select, poll和epoll IO模型的详解](http://blog.csdn.net/tianmohust/article/details/6677985)
 * [TCP的TIME_WAIT快速回收与重用](http://blog.csdn.net/dog250/article/details/13760985)

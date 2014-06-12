@@ -9,6 +9,7 @@
 * [如何高效利用GitHub](http://www.yangzhiping.com/tech/github.html)
 * [Linux服务器Cache占用过多内存导致系统内存不足问题的排查解决](http://www.cnblogs.com/panfeng412/p/drop-caches-under-linux-system.html)
 * [ZeroMQ的学习和研究](http://www.searchtb.com/2012/08/zeromq-primer.html)
+* [linux下使用protobuf实现简单配置功能](http://blog.csdn.net/flyan338/article/details/8448518)
 * [如何利用WHOIS查询IP的来源](http://www.bitscn.com/network/hack/200607/29352.html)
 * [JS跨域请求](http://blog.csdn.net/chosen0ne/article/details/7333626)
 * [NFA转DFA与DFA化简](http://blog.163.com/it_novice/blog/static/2091830692013465450493/)

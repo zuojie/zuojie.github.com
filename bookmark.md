@@ -7,6 +7,7 @@
 * [TCP的TIME_WAIT快速回收与重用](http://blog.csdn.net/dog250/article/details/13760985)
 * [11.7.3 Temporaries May Vanish Before You Expect](http://gcc.gnu.org/onlinedocs/gcc/Temporaries.html)
 * [如何高效利用GitHub](http://www.yangzhiping.com/tech/github.html)
+* [互联网后台服务的协议设计](http://www.cnblogs.com/liyulong1982/p/3404947.html)
 * [Linux服务器Cache占用过多内存导致系统内存不足问题的排查解决](http://www.cnblogs.com/panfeng412/p/drop-caches-under-linux-system.html)
 * [ZeroMQ的学习和研究](http://www.searchtb.com/2012/08/zeromq-primer.html)
 * [linux下使用protobuf实现简单配置功能](http://blog.csdn.net/flyan338/article/details/8448518)

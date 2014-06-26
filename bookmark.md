@@ -1,5 +1,6 @@
 ####Article
 * [系统调用的实现原理](http://blog.csdn.net/chosen0ne/article/details/7721550) 
+* [基于用户投票的排名算法（四）：牛顿冷却定律](http://www.ruanyifeng.com/blog/2012/03/ranking_algorithm_newton_s_law_of_cooling.html)
 * [SOCKET API和TCP STATE的对应关系__三次握手(listen,accept,connect)__四次挥手close及TCP延迟确认(调用一次setsockopt函数，设置TCP_QUICKACK)__长连接API小心“窜包”问题](http://blog.163.com/xychenbaihu@yeah/blog/static/13222965520118139252103/)
 * [Buffer Overflows](http://www.spectrumcoding.com/tutorials/exploits/2013/05/27/buffer-overflows.html)
 * [Errata for flex & bison](http://www.oreilly.com/catalog/errata.csp?isbn=9780596155988)

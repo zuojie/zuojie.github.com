@@ -9,4 +9,5 @@ meta: Logistic Regression, machine learning
 ###背景知识(回归，优化，预测)
 回归的作用是根据已知的信息对连续性的未知值作预测（比如今年某个商品的价格之类的），分为线性回归和非线性回归。线性回归概念很简单，举个例子。假如某个饮料店有过去7天某款饮料的销售记录，还有过去7天的天气（晴朗/阴天/下雨）以及气温。我们假设销量Y和天气X1以及气温X2存在线性相关的关系：\\(Y＝X\_{1}+X\_{2}\\)  。那么我们就可以根据这个这个公式预测当天的饮料销量，这就是回归预测。 
 
+![fk](http://latex.codecogs.com/gif.latex?a_{x&space;=&space;a_0&space;&plus;&space;\frac{1}{a_1&space;&plus;&space;\frac{1}{a_2&space;&plus;&space;\frac{1}{a_3&space;&plus;&space;a_4}}}a}&plus;b_{b})
 

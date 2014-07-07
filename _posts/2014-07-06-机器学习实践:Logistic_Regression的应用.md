@@ -19,4 +19,8 @@ meta: Logistic Regression, machine learning
 #####而求权重向量的方法仍然是梯度下降。有趣的是，线性回归和LR在迭代求解W的时候，权重的变化公式是一样的。   
 ![st](/demo/LR3.png)      
 #####化简变形（这也是线性回归情况下梯度下降方法的权重变化公式）
+![st](/demo/LR4.png)
+####提前放出python代码，上述迭代公式对应的python代码如下（已经使用numpy进行vectorization）
+![st](/demo/LR5.png)   
+
 ##实战

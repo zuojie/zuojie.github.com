@@ -24,7 +24,18 @@ meta: Logistic Regression, machine learning
 ![st](/demo/LR5.png)   
 
 ##实战
+实战直接使用《MIA》提供的数据集，每一行格式如下：   
+x y label   
+分别为x，y坐标，分类（0 or 1）.
+ 
+使用剃度下降跑500圈的效果如图：   
+![st](/demo/LR6_500.png)   
+使用随机梯度下降跑100圈如图：   
+![st](/demo/LR7_100.png)   
+使用随机梯度下降跑500圈如图：   
+![st](/demo/LR7_500.png)   
 
+代码见这里[LR](https://github.com/zuojie/MachineLearningCases/tree/master/LR)    
 ###参考资料
 * [从最大似然到EM算法浅解](http://blog.csdn.net/zouxy09/article/details/8537620)
 * 《Machine Learning in Action》

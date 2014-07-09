@@ -24,7 +24,7 @@ meta: Logistic Regression, machine learning
 ![st](/demo/LR5.png)   
 
 ##实战
-实战直接使用《MIA》提供的数据集，每一行格式如下：   
+实战直接使用《MLIA》提供的数据集，每一行格式如下：   
 x y label   
 分别为x，y坐标，分类（0 or 1）.
  

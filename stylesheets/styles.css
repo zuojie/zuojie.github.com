@@ -883,7 +883,7 @@ nav ul a:hover {
 
 footer {
   width: 180px;
-  position: fixed;
+  position: absolute;
   left: 50%;
   margin-left: -530px;
   bottom: 20px;

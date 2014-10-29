@@ -1,5 +1,6 @@
 ####Article
 * [系统调用的实现原理](http://blog.csdn.net/chosen0ne/article/details/7721550) 
+* [vim终端下中文乱码问题](http://www.vimer.cn/2009/10/vim%E7%BB%88%E7%AB%AF%E4%B8%8B%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.html)
 * [Awk 中变量作用域的问题](http://www.ibm.com/developerworks/cn/linux/l-cn-awkf/)
 * [基于用户投票的排名算法（四）：牛顿冷却定律](http://www.ruanyifeng.com/blog/2012/03/ranking_algorithm_newton_s_law_of_cooling.html)
 * [SOCKET API和TCP STATE的对应关系__三次握手(listen,accept,connect)__四次挥手close及TCP延迟确认(调用一次setsockopt函数，设置TCP_QUICKACK)__长连接API小心“窜包”问题](http://blog.163.com/xychenbaihu@yeah/blog/static/13222965520118139252103/)

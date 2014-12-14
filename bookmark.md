@@ -40,6 +40,7 @@
 * 【java】[Java Garbage Collection(GC)优化及配置](http://286.iteye.com/blog/1937030)
 * 【java】[Hadoop YARN配置参数剖析(3)—MapReduce相关参数](http://dongxicheng.org/mapreduce-nextgen/hadoop-yarn-configurations-mapreduce/)
 * 【java】[hadoop作业调优参数整理及原理](http://www.alidata.org/archives/1470)
+* 【java】[Upgrading To The New Map Reduce API](http://www.slideshare.net/sh1mmer/upgrading-to-the-new-map-reduce-api)
 
 ####Blog
 * [spongeliu's blog](http://www.spongeliu.com/)

@@ -37,7 +37,9 @@
 * [位运算](http://graphics.stanford.edu/~seander/bithacks.html)
 * [网站统计中的数据收集原理及实现](http://blog.codinglabs.org/articles/how-web-analytics-data-collection-system-work.html)
 * [《机器学习实战》作者Peter Harrington：如何成为一位数据科学家（图灵访谈）](http://blog.csdn.net/wdxin1322/article/details/12186441)   
-* (java)[Java Garbage Collection(GC)优化及配置](http://286.iteye.com/blog/1937030)
+* 【java】[Java Garbage Collection(GC)优化及配置](http://286.iteye.com/blog/1937030)
+* 【java】[Hadoop YARN配置参数剖析(3)—MapReduce相关参数](http://dongxicheng.org/mapreduce-nextgen/hadoop-yarn-configurations-mapreduce/)
+* 【java】[hadoop作业调优参数整理及原理](http://www.alidata.org/archives/1470)
 
 ####Blog
 * [spongeliu's blog](http://www.spongeliu.com/)
